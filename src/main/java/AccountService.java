@@ -14,6 +14,10 @@ public class AccountService {
 		Account newAcc = new Account(firstName, lastName, accountNumber);
 		account.put(newAcc.getAccountNumber(), newAcc);
 	}
+	
+	public void retrieveAccount(int accountNumber) {
+		System.out.println(account.get(accountNumber));
+	}
 
 
 }

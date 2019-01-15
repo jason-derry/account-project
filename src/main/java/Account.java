@@ -31,4 +31,10 @@ public class Account {
 		return accountNumber;
 	}
 
+	@Override
+	public String toString() {
+		return firstName + " " + lastName + ", ID: " + accountNumber;
+	}
+	
+
 }
