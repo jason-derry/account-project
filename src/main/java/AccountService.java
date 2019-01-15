@@ -10,14 +10,12 @@ public class AccountService {
 		account.put(bob.getAccountNumber(), bob);
 	}
 	
-	public void addAccount(String firstName, String lastName, int accountNumber) {
-		Account newAcc = new Account(firstName, lastName, accountNumber);
-		account.put(newAcc.getAccountNumber(), newAcc);
+	public Account addAccount(String firstName, String lastName, int accountNumber) {
+		return account.put(accountNumber, new Account(firstName, lastName, accountNumber));
 	}
 	
-	public void retrieveAccount(int accountNumber) {
-		System.out.println(account.get(accountNumber));
+	public Account retrieveAccount(int accountNumber) {
+		return account.get(accountNumber);
 	}
-
 
 }

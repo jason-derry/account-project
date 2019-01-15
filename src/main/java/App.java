@@ -10,9 +10,9 @@ public class App {
 		ac1.addAccount("Jeff", "Jones", 2);
 		ac1.addAccount("Jim", "Jerry", 43);
 		
-		ac1.retrieveAccount(1);
-		ac1.retrieveAccount(2);
-		ac1.retrieveAccount(43);
+		System.out.println(ac1.retrieveAccount(1));
+		System.out.println(ac1.retrieveAccount(2));
+		System.out.println(ac1.retrieveAccount(43));
 
 	}
 
