@@ -6,7 +6,7 @@ public class App {
 		
 		AccountService ac1 = new AccountService();
 		
-		ac1.addAccount();
+		ac1.addAccount("Bob", "Jenkins", 1);
 		ac1.addAccount("Jeff", "Jones", 2);
 		ac1.addAccount("Jim", "Jerry", 43);
 		
