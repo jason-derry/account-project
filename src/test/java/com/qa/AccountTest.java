@@ -25,4 +25,10 @@ public class AccountTest {
 		assertEquals("first last, ID: 1", ac1.account.get(1).toString());
 	}
 
+	@Test
+	public void testRetrieveAccounts() {
+		ac1.addAccount("first", "last");
+		assertEquals("{\"1\":{\"firstName\":\"first\",\"lastName\":\"last\",\"accountNumber\":1}}", ac1.retrieveAccounts());
+	}	
+	
 }

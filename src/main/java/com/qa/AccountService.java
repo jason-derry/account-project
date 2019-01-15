@@ -2,7 +2,11 @@ package com.qa;
 
 import java.util.HashMap;
 
+import com.google.gson.Gson;
+
 public class AccountService {
+	
+	Gson gson = new Gson();
 	
 	HashMap<Integer, Account> account = new HashMap<Integer, Account>();
 	
@@ -16,5 +20,9 @@ public class AccountService {
 	public Account retrieveAccount(int accountNumber) {
 		return account.get(accountNumber);
 	}
+	
+	public String retrieveAccounts() {
+		return gson.toJson(account);
+	}	
 
 }

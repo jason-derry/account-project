@@ -12,9 +12,11 @@ public class App {
 		ac1.addAccount("Jeff", "Jones");
 		ac1.addAccount("Jim", "Jerry");
 		
-		System.out.println(ac1.retrieveAccount(1));
-		System.out.println(ac1.retrieveAccount(2));
-		System.out.println(ac1.retrieveAccount(3));
+//		System.out.println(ac1.retrieveAccount(1));
+//		System.out.println(ac1.retrieveAccount(2));
+//		System.out.println(ac1.retrieveAccount(3));
+		
+		System.out.println(ac1.retrieveAccounts());
 
 	}
 
