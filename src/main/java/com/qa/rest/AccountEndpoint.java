@@ -19,18 +19,20 @@ public class AccountEndpoint {
 	@Inject
 	private AccountService service;
 
-	@Path("/getAllAccounts/{accNo}")
+	@Path("/retrieveAccounts/")
 	@GET
 	@Produces({ "application/json" })
-	public String retrieveAccount(@PathParam("accNo") int accNo) {
-		return service.retrieveAccount(accNo);
+	public String retrieveAccounts(@PathParam("accNo") int accNo) {
+//		return service.retrieveAccounts(accNo);
+		return null;
 	}
 
-	@Path("/createAccount")
+	@Path("/addAccount")
 	@POST
 	@Produces({ "application/json" })
 	public String addAccount(String account) {
-		return service.addAccount(account);
+//		return service.addAccount(account);
+		return null;
 	}
 	
 	@Path("/countFirstName/{name}")
