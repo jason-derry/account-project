@@ -8,7 +8,7 @@ public class AccountService {
 	
 	Gson gson = new Gson();
 	
-	HashMap<Integer, Account> account = new HashMap<Integer, Account>();
+	HashMap<Integer, Account> account = new HashMap<>();
 	
 	int counter = 1;
 	
