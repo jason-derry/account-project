@@ -46,40 +46,4 @@ public class AccountTest {
 		assertEquals(1, ac1.account.get(1).getAccountNumber());
 	}
 	
-	@Test public void testCountFirstName() {
-		ac1.addAccount("Jeff", "Bridges");
-		ac1.addAccount("Jeremy", "Kyle");
-		ac1.addAccount("Jeff", "Dunham");
-		ac1.addAccount("Jeremy", "Clarkson");
-		ac1.addAccount("Jeff", "Bezos");
-		ac1.addAccount("Michael", "Scarn");
-		ac1.addAccount("Jeff", "Goldblum");
-		
-		assertEquals(4, ac1.countFirstName("jeff"));
-	}
-	
-	@Test public void testCountFirstName2() {
-		ac1.addAccount("Jeff", "Bridges");
-		ac1.addAccount("Jeremy", "Kyle");
-		ac1.addAccount("Jeff", "Dunham");
-		ac1.addAccount("Jeremy", "Clarkson");
-		ac1.addAccount("Jeff", "Bezos");
-		ac1.addAccount("Michael", "Scarn");
-		ac1.addAccount("Jeff", "Goldblum");
-		
-		assertEquals(2, ac1.countFirstName("jeremy"));
-	}
-	
-	@Test public void testCountFirstName3() {
-		ac1.addAccount("Jeff", "Bridges");
-		ac1.addAccount("Jeremy", "Kyle");
-		ac1.addAccount("Jeff", "Dunham");
-		ac1.addAccount("Jeremy", "Clarkson");
-		ac1.addAccount("Jeff", "Bezos");
-		ac1.addAccount("Michael", "Scarn");
-		ac1.addAccount("Jeff", "Goldblum");
-		
-		assertEquals(1, ac1.countFirstName("michael"));
-	}
-	
 }
