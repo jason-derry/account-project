@@ -2,9 +2,13 @@ package com.qa;
 
 import java.util.HashMap;
 
+import com.google.gson.Gson;
+
 public class AccountService {
 	
-	HashMap<Integer, Account> account = new HashMap<Integer, Account>();
+	Gson gson = new Gson();
+	
+	HashMap<Integer, Account> account = new HashMap<>();
 	
 	int counter = 1;
 	
@@ -16,5 +20,9 @@ public class AccountService {
 	public Account retrieveAccount(int accountNumber) {
 		return account.get(accountNumber);
 	}
+	
+	public String retrieveAccounts() {
+		return gson.toJson(account);
+	}	
 
 }

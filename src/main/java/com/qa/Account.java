@@ -7,8 +7,8 @@ public class Account {
 	private int accountNumber;
 	
 	Account (String firstName, String lastName, int accountNumber) {
-		this.firstName = firstName;
-		this.lastName = lastName;
+		this.setFirstName(firstName);
+		this.setLastName(lastName);
 		this.accountNumber = accountNumber;
 	}
 
