@@ -1,4 +1,4 @@
-package com.qa;
+package com.qa.business.service;
 
 import java.util.HashMap;
 
