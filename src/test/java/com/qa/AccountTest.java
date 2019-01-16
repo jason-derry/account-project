@@ -55,7 +55,7 @@ public class AccountTest {
 		ac1.addAccount("Michael", "Scarn");
 		ac1.addAccount("Jeff", "Goldblum");
 		
-		assertEquals(4, ac1.account.countFirstName("jeff"));
+		assertEquals(4, ac1.countFirstName("jeff"));
 	}
 	
 	@Test public void testCountFirstName2() {
@@ -67,7 +67,7 @@ public class AccountTest {
 		ac1.addAccount("Michael", "Scarn");
 		ac1.addAccount("Jeff", "Goldblum");
 		
-		assertEquals(2, ac1.account.countFirstName("jeremy"));
+		assertEquals(2, ac1.countFirstName("jeremy"));
 	}
 	
 	@Test public void testCountFirstName3() {
@@ -79,7 +79,7 @@ public class AccountTest {
 		ac1.addAccount("Michael", "Scarn");
 		ac1.addAccount("Jeff", "Goldblum");
 		
-		assertEquals(4, ac1.account.countFirstName("michael"));
+		assertEquals(4, ac1.countFirstName("michael"));
 	}
 	
 }

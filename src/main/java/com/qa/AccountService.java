@@ -25,5 +25,10 @@ public class AccountService {
 		return gson.toJson(account);
 	}
 	
+	public int countFirstName(String name) {
+		int count = 0;
+		
+		return count;
+	}
 
 }
