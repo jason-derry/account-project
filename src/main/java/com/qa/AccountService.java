@@ -26,14 +26,7 @@ public class AccountService {
 	}
 	
 	public int countFirstName(String name) {
-		int count = 0;
-		
-		for(int i = 1; i < counter; i++) {
-			if (name.toLowerCase().equals(account.get(i).getFirstName().toLowerCase())) {
-				count++;
-			}
-		}
-		
+		int count = (int) account.values().stream().filter(eachAccount -> eachAccount.getFirstName().toLowerCase().equalsIgnoreCase(name)).count();
 		System.out.println(count);
 		return count;
 	}
