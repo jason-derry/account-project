@@ -28,6 +28,13 @@ public class AccountService {
 	public int countFirstName(String name) {
 		int count = 0;
 		
+		for(int i = 1; i < counter; i++) {
+			if (name.toLowerCase().equals(account.get(i).getFirstName().toLowerCase())) {
+				count++;
+			}
+		}
+		
+		System.out.println(count);
 		return count;
 	}
 

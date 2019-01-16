@@ -79,7 +79,7 @@ public class AccountTest {
 		ac1.addAccount("Michael", "Scarn");
 		ac1.addAccount("Jeff", "Goldblum");
 		
-		assertEquals(4, ac1.countFirstName("michael"));
+		assertEquals(1, ac1.countFirstName("michael"));
 	}
 	
 }
