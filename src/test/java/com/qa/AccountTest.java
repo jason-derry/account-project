@@ -47,7 +47,39 @@ public class AccountTest {
 	}
 	
 	@Test public void testCountFirstName() {
-		fail("not yet implemented");
+		ac1.addAccount("Jeff", "Bridges");
+		ac1.addAccount("Jeremy", "Kyle");
+		ac1.addAccount("Jeff", "Dunham");
+		ac1.addAccount("Jeremy", "Clarkson");
+		ac1.addAccount("Jeff", "Bezos");
+		ac1.addAccount("Michael", "Scarn");
+		ac1.addAccount("Jeff", "Goldblum");
+		
+		assertEquals(4, ac1.account.countFirstName("jeff"));
+	}
+	
+	@Test public void testCountFirstName2() {
+		ac1.addAccount("Jeff", "Bridges");
+		ac1.addAccount("Jeremy", "Kyle");
+		ac1.addAccount("Jeff", "Dunham");
+		ac1.addAccount("Jeremy", "Clarkson");
+		ac1.addAccount("Jeff", "Bezos");
+		ac1.addAccount("Michael", "Scarn");
+		ac1.addAccount("Jeff", "Goldblum");
+		
+		assertEquals(2, ac1.account.countFirstName("jeremy"));
+	}
+	
+	@Test public void testCountFirstName3() {
+		ac1.addAccount("Jeff", "Bridges");
+		ac1.addAccount("Jeremy", "Kyle");
+		ac1.addAccount("Jeff", "Dunham");
+		ac1.addAccount("Jeremy", "Clarkson");
+		ac1.addAccount("Jeff", "Bezos");
+		ac1.addAccount("Michael", "Scarn");
+		ac1.addAccount("Jeff", "Goldblum");
+		
+		assertEquals(4, ac1.account.countFirstName("michael"));
 	}
 	
 }
