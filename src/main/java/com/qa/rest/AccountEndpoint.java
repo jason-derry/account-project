@@ -34,7 +34,7 @@ public class AccountEndpoint {
 	}
 	
 	@Path("/json/{id}")
-	@POST
+	@DELETE
 	@Produces({ "application/json" })
 	public String deleteAccount(@PathParam("id") Long id) {
 		return service.deleteAccount(id);

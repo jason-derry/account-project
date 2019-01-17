@@ -45,7 +45,7 @@ public class AccountDBRepository implements AccountRepository {
 	public String createAccount(String account) {
 		Account anAccount = util.getObjectForJSON(account, Account.class);
 		manager.persist(anAccount);
-		return null;
+		return "account created";
 	}
 	
 	@Override
