@@ -35,15 +35,8 @@ public class AccountEndpoint {
 		return null;
 	}
 	
-	@Path("/countFirstName/{name}")
-	@GET
-	@Produces({ "application/json" })
-	public int countFirstName(@PathParam("name") String name) {
-		return service.countFirstName(name);
-	}
 
-
-		public void setService(AccountService service) {
+	public void setService(AccountService service) {
 		this.service = service;
 	}
 

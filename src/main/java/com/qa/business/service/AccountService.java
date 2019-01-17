@@ -2,8 +2,12 @@ package com.qa.business.service;
 
 public interface AccountService {
 
-	String retrieveAccounts();
-	void addAccount(String account);
-	int countFirstName(String name);
+	String getAllAccounts();
+
+	String createAccount(String account);
+	
+	String updateAccount(Long id, String firstName, String lastName);
+
+	String deleteAccount(Long id);
 
 }

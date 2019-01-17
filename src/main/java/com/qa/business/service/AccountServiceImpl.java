@@ -4,17 +4,47 @@ import java.util.HashMap;
 
 import javax.inject.Inject;
 
-import com.google.gson.Gson;
 import com.qa.persistence.repository.AccountRepository;
 
 public class AccountServiceImpl implements AccountService {
 	
 	@Inject
 	private AccountRepository repo;
+	
+	@Override
+	public String getAllAccounts() {
+		return repo.getAllAccounts();
+	}
+	
+	@Override
+	public String createAccount(String account) {
+		return repo.createAccount(account);
+	}
+	
+	@Override
+	public String updateAccount(Long id, String firstName, String lastName) {
+		return repo.updateAccount(id, firstName, lastName);
+	}
+	
+	@Override
+	public String deleteAccount(Long id) {
+		return repo.deleteAccount(id);
+	}
+	
+	public void setRepo(AccountRepository repo) {
+		this.repo = repo;
+	}
+	
+}
+//	Gson gson = new Gson();
 
-	
-	Gson gson = new Gson();
-	
+//	public int countFirstName(String name) {
+//		int count = (int) account.values().stream().filter(eachAccount -> eachAccount.getFirstName().toLowerCase().equalsIgnoreCase(name)).count();
+//		System.out.println(count);
+//		return count;
+//		return (Integer) null;
+//	}
+
 //	HashMap<Integer, Account> account = new HashMap<>();
 //	
 //	int counter = 1;
@@ -29,24 +59,3 @@ public class AccountServiceImpl implements AccountService {
 //	public Account retrieveAccount(int accountNumber) {
 //		return account.get(accountNumber);
 //	}
-	
-	@Override
-	public void addAccount(String account) {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	@Override
-	public String retrieveAccounts() {
-//		return gson.toJson(account);
-		return repo.retrieveAccounts();
-	}
-	
-	@Override
-	public int countFirstName(String name) {
-//		int count = (int) account.values().stream().filter(eachAccount -> eachAccount.getFirstName().toLowerCase().equalsIgnoreCase(name)).count();
-//		System.out.println(count);
-//		return count;
-		return repo.countFirstName(name);
-	}
-}
