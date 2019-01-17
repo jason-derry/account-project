@@ -4,6 +4,7 @@ import static javax.transaction.Transactional.TxType.REQUIRED;
 import static javax.transaction.Transactional.TxType.SUPPORTS;
 
 import java.util.Collection;
+import java.util.List;
 
 import javax.enterprise.inject.Default;
 import javax.inject.Inject;
@@ -41,8 +42,9 @@ public class AccountDBRepository implements AccountRepository {
 	
 	@Override
 	public String retrieveAccounts() {
-		// TODO Auto-generated method stub
-		return null;
+		Query query = manager.createQuery("Select a From Account a");
+		Collection<Account> result = (Collection<Account>) query.getResultList();
+		return util.getJSONForObject(result);
 	}
 
 	@Override
