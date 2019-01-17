@@ -29,17 +29,6 @@ public class AccountDBRepository implements AccountRepository {
 	@Inject
 	private JSONUtil util;
 	
-//	public void createAccounts() {
-//		Account johnDoe = new Account("John","Doe","1234");
-//		Account janeDoe = new Account("Jane","Doe","1235");
-//		Account jimTaylor = new Account("Jim","Taylor","1236");
-//
-//		manager.persist(util.getJSONForObject(johnDoe));
-//		manager.persist(util.getJSONForObject(janeDoe));
-//		manager.persist(util.getJSONForObject(jimTaylor));
-//	}
-
-	
 	@Override
 	public String getAllAccounts() {
 		Query query = manager.createQuery("Select a From Account a");
@@ -86,3 +75,13 @@ public class AccountDBRepository implements AccountRepository {
 		this.util = util;
 	}
 }
+
+//	public void createAccounts() {
+//		Account johnDoe = new Account("John","Doe","1234");
+//		Account janeDoe = new Account("Jane","Doe","1235");
+//		Account jimTaylor = new Account("Jim","Taylor","1236");
+//
+//		manager.persist(util.getJSONForObject(johnDoe));
+//		manager.persist(util.getJSONForObject(janeDoe));
+//		manager.persist(util.getJSONForObject(jimTaylor));
+//	}

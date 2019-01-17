@@ -15,6 +15,39 @@ public class AccountServiceImpl implements AccountService {
 	
 	Gson gson = new Gson();
 	
+	
+	@Override
+	public String getAllAccounts() {
+		return repo.getAllAccounts();
+	}
+	
+	@Override
+	public String createAccount(String account) {
+		return repo.createAccount(account);
+	}
+	
+	@Override
+	public String updateAccount(Long id, String firstName, String lastName) {
+		return repo.updateAccount(id, firstName, lastName);
+	}
+	
+	@Override
+	public String deleteAccount(Long id) {
+		return repo.deleteAccount(id);
+	}
+	
+	public void setRepo(AccountRepository repo) {
+		this.repo = repo;
+	}
+	
+}
+//	public int countFirstName(String name) {
+//		int count = (int) account.values().stream().filter(eachAccount -> eachAccount.getFirstName().toLowerCase().equalsIgnoreCase(name)).count();
+//		System.out.println(count);
+//		return count;
+//		return (Integer) null;
+//	}
+
 //	HashMap<Integer, Account> account = new HashMap<>();
 //	
 //	int counter = 1;
@@ -29,36 +62,3 @@ public class AccountServiceImpl implements AccountService {
 //	public Account retrieveAccount(int accountNumber) {
 //		return account.get(accountNumber);
 //	}
-	
-	@Override
-	public String getAllAccounts() {
-//		return gson.toJson(account);
-		return repo.getAllAccounts();
-	}
-	
-	@Override
-	public String createAccount(String account) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	@Override
-	public String updateAccount(Long id, String firstName, String lastName) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	@Override
-	public String deleteAccount(Long id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	public int countFirstName(String name) {
-//		int count = (int) account.values().stream().filter(eachAccount -> eachAccount.getFirstName().toLowerCase().equalsIgnoreCase(name)).count();
-//		System.out.println(count);
-//		return count;
-		return (Integer) null;
-	}
-
-}
