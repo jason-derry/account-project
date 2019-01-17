@@ -31,22 +31,34 @@ public class AccountServiceImpl implements AccountService {
 //	}
 	
 	@Override
-	public void addAccount(String account) {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	@Override
-	public String retrieveAccounts() {
+	public String getAllAccounts() {
 //		return gson.toJson(account);
-		return repo.retrieveAccounts();
+		return repo.getAllAccounts();
 	}
 	
 	@Override
+	public String createAccount(String account) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	@Override
+	public String updateAccount(Long id, String firstName, String lastName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	@Override
+	public String deleteAccount(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 	public int countFirstName(String name) {
 //		int count = (int) account.values().stream().filter(eachAccount -> eachAccount.getFirstName().toLowerCase().equalsIgnoreCase(name)).count();
 //		System.out.println(count);
 //		return count;
-		return repo.countFirstName(name);
+		return (Integer) null;
 	}
+
 }
