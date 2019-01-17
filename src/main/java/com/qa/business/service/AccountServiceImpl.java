@@ -4,12 +4,15 @@ import java.util.HashMap;
 
 import javax.inject.Inject;
 
+import com.qa.persistence.domain.Account;
 import com.qa.persistence.repository.AccountRepository;
+import com.qa.util.JSONUtil;
 
 public class AccountServiceImpl implements AccountService {
 	
 	@Inject
 	private AccountRepository repo;
+	private JSONUtil util;
 	
 	@Override
 	public String getAllAccounts() {
@@ -18,7 +21,11 @@ public class AccountServiceImpl implements AccountService {
 	
 	@Override
 	public String createAccount(String account) {
-		return repo.createAccount(account);
+		if (util.getObjectForJSON(account, Account.class).getAccountNumber().equals("9999")) {
+			return "{“message”: “This account is blocked”}";
+		} else {
+			return repo.createAccount(account);
+		}
 	}
 	
 	@Override
