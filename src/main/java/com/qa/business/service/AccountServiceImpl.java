@@ -4,17 +4,12 @@ import java.util.HashMap;
 
 import javax.inject.Inject;
 
-import com.google.gson.Gson;
 import com.qa.persistence.repository.AccountRepository;
 
 public class AccountServiceImpl implements AccountService {
 	
 	@Inject
 	private AccountRepository repo;
-
-	
-	Gson gson = new Gson();
-	
 	
 	@Override
 	public String getAllAccounts() {
@@ -41,6 +36,8 @@ public class AccountServiceImpl implements AccountService {
 	}
 	
 }
+//	Gson gson = new Gson();
+
 //	public int countFirstName(String name) {
 //		int count = (int) account.values().stream().filter(eachAccount -> eachAccount.getFirstName().toLowerCase().equalsIgnoreCase(name)).count();
 //		System.out.println(count);
